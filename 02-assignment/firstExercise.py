@@ -53,9 +53,12 @@ def doFile(arguments):
                 for row in reader:
                     print(str(row))
 
+#I nedenstående main sætning kan du køre en funktion der kører alle funktioner
+#parser.add_argument("--arg", help="")
 
 if __name__ == '__main__':
-    #printFile(sys.argv[1])
+    printFile(sys.argv[1])
     #writeToFile(sys.argv[1], sys.argv[2])
     #writeManyToFile(sys.argv[1])
     #listFile(sys.argv[1])
+
