@@ -31,30 +31,10 @@ def listFile(file):
         reader = csv.reader(fObj)
         return [row for row in reader]
 
-#2.
-def doFile(arguments):
-    try:
-        opts, args = getopt.getopt(arguments, "f", ["file"])
-    except getopt.GetoptError as err:
-        # print help information and exit:
-        print(err)  # will print something like "option -a not recognized"
-        usage()
-        sys.exit(2)
-
-    for options, file in opts:
-        print(option)
-        with open(file) as fObj:
-            if option in ("-f", "--file"):
-                with open(file) as fObj:
-                    for element in list:
-                        fObj.write(str(element))
-            else:            
-                reader = csv.reader(fObj)
-                for row in reader:
-                    print(str(row))
+ 
 
 #I nedenstående main sætning kan du køre en funktion der kører alle funktioner
-#parser.add_argument("--arg", help="")
+#parser.add_argument("--arg", help="")*/
 
 if __name__ == '__main__':
     printFile(sys.argv[1])

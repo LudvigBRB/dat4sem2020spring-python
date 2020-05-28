@@ -2,20 +2,21 @@ import requests
 import threading
 
 class LoadDown():
+    
     def __init__(self, url_list): #, url_list
         self.url_list = url_list
 
     def __iter__(self):
-        self.a = -1
-        return self
+        #self.a = 1
+        return self.url_list
 
     def __next__(self):
-        x = self.a
-        self.a += 1
-        return self.url_list[x]
+        #x = self.a
+        #self.a += 1
+        return x#self.url_list#x  
 
-    def urllist_generator(self):
-        return iter(self)
+    #def urllist_generator(self):
+     #   return iter(self)
 
     def download(self, url, filename):
         r = requests.get(url)
@@ -32,15 +33,17 @@ def get_url(url, filename):#, filename
     with open(filename, 'wb') as fd:
         fd.write(r.content)
     
+    print("\n")
+    print("\n")
+    print("\n")
+    print("\n")
+    print("\n")
     print("Jeg er færdig")
-    print("\n")
-    print("\n")
-    print("\n")
 
 def download_multiple(url_list):
     for url in url_list:
         (threading.Thread(target=get_url, args=(url, url[24:27]+".txt"))).start()
 
 class URLfour(ValueError):
-    def __init__(self, arg):
-        ValueError.__init__(self, arg)
+    def __init__(self, *args, **kwargs):
+        ValueError.__init__(self, *args, **kwargs)

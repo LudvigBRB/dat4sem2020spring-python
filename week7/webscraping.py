@@ -14,6 +14,16 @@ def get_prehistoric_creatures(url):
     
     for e in events:
         print(e.getText())
+        #return e.getText()
+        
+def get_all_prehistoric_creatures(base_url):
+    animals = []
+    
+    for c in ascii_lowercase:
+        scrape_url = base_url.format(c)
+        animals.append(get_prehistoric_creatures(scrape_url))
+    
+    return animals
 
 def get_DBA_price(name):
     base_url = 'https://www.dba.dk/'
